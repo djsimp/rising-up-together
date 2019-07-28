@@ -16,7 +16,8 @@
 </template>
 
 <script>
-import DevJockey from "./DevJockey.vue"
+//import DevJockey from "./DevJockey.vue"
+
 export default {
   name: 'Footer',
   components: {
