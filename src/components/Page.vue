@@ -1,13 +1,19 @@
 <template>
   <div id="page-body">
     <Header :active-tab="curPage" @tab-switched="switchPage" />
-    <Form v-if="curPage !== 'ABOUT'" :url="formUrl" :height="formHeight" />
+    <AboutPage v-if="curPage === 'ABOUT'" />
+    <Form v-if="curPage === 'SPEAKERS' || curPage === 'VOLUNTEERS'" :url="formUrl" :height="formHeight" />
+    <DonatePage v-if="curPage === 'DONATE'" />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "./Header.vue"
 import Form from "./Form.vue"
+import AboutPage from "./AboutPage.vue"
+import DonatePage from "./DonatePage.vue"
+import Footer from "./Footer.vue"
 
 export default {
   name: 'Page',
@@ -43,7 +49,10 @@ export default {
   },
   components: {
     Header,
-    Form
+    Form,
+    AboutPage,
+    DonatePage,
+    Footer
   },
   methods: {
     switchPage(page) {

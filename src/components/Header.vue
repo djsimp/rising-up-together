@@ -1,7 +1,12 @@
 <template>
-  <div id="header">
-    <img alt="Vue logo" src="../assets/rising_up_together_logo.jpg">
-    <Tabs :tabs="tabs" :cur-tab="activeTab" @tab-clicked="switchTab" />
+  <div>
+    <div id="header">
+      <img alt="Vue logo" src="../assets/rising_up_together_logo.jpg">
+      <Tabs :tabs="tabs" :cur-tab="activeTab" @tab-clicked="switchTab" />
+    </div>
+    <div id="border">
+      <div>Lifting each other out of the R.U.T.</div>
+    </div>
   </div>
 </template>
 
@@ -19,22 +24,22 @@ export default {
   data: function() {
     return {
       tabs: [
-      /*  {
+        {
           label: "ABOUT",
           active: false,
           url: "/about"
-        }, {
+        }, /*{
           label: "CONTACT US",
           active: false,
           url: "/contact-us"
         }, */{
-          label: "VOLUNTEERS",
-          active: false,
-          url: "/volunteers"
-        }, {
           label: "SPEAKERS",
           active: false,
           url: "/speakers"
+        }, {
+          label: "VOLUNTEERS",
+          active: false,
+          url: "/volunteers"
         }, {
           label: "DONATE",
           active: false,
@@ -81,7 +86,7 @@ export default {
     },
   },
   mounted() {
-    this.switchTab("VOLUNTEERS");
+    this.switchTab("ABOUT");
   }
 }
 </script>
@@ -99,5 +104,12 @@ export default {
 img {
   height: 80px;
   margin: 10px;
+}
+#border {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 500;
+  display: flex;
 }
 </style>
