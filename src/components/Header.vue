@@ -35,6 +35,10 @@ export default {
           label: "SPEAKERS",
           active: false,
           url: "/speakers"
+        }, {
+          label: "DONATE",
+          active: false,
+          url: "/speakers"
         }, /*{
           label: "SCHOOL DISTRICT",
           active: false,
