@@ -7,7 +7,7 @@
       </div>
       <div class="column-section">
         <h2>Mission</h2>
-        <p>Bringing communities and organizations together to reduce youth suicide by encouraging them to ask for help, and break the negative stigma associated with mental illness as we lift, build, and serve one another.</p>
+<p>Bringing communities and organizations together to reduce youth suicide as we break the negative stigma associated with mental illness and asking for help; as we lift, build, and serve one another.</p>
       </div>
       <div class="column-section">
         <h2>How this mission will be achieved</h2>
