@@ -20,7 +20,7 @@ import DevJockey from "./DevJockey.vue"
 export default {
   name: 'Footer',
   components: {
-    DevJockey
+  //  DevJockey
   }
 }
 </script>

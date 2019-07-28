@@ -1,10 +1,12 @@
 <template>
   <div id="page-body">
     <Header :active-tab="curPage" @tab-switched="switchPage" />
-    <AboutPage v-if="curPage === 'ABOUT'" />
-    <Form v-if="curPage === 'SPEAKERS' || curPage === 'VOLUNTEERS'" :url="formUrl" :height="formHeight" />
-    <DonatePage v-if="curPage === 'DONATE'" />
-    <Footer />
+    <div id="page-content">
+      <AboutPage v-if="curPage === 'ABOUT'" />
+      <Form v-if="curPage === 'SPEAKERS' || curPage === 'VOLUNTEERS'" :url="formUrl" :height="formHeight" />
+      <DonatePage v-if="curPage === 'DONATE'" />
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -64,5 +66,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  #page-content {
+    margin-top: 132px;
+  }
 </style>

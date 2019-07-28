@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="header-container">
     <div id="header">
       <img alt="Vue logo" src="../assets/rising_up_together_logo.jpg">
       <Tabs :tabs="tabs" :cur-tab="activeTab" @tab-clicked="switchTab" />
@@ -93,6 +93,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#header-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+}
 #header {
   background-color: grey;
   display: flex;
