@@ -1,6 +1,6 @@
 <template>
   <div id="donate-page">
-    <img src="../assets/venmo-qr.png"/>
+    <img src="../../assets/venmo-qr.png"/>
   </div>
 </template>
 

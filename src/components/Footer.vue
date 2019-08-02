@@ -31,7 +31,7 @@ export default {
     height: 100px;
     display: flex;
     align-items: center;
-    background-color: #6693bd;
+    background-color: #85BADC;
     flex-wrap: wrap;
     justify-content: space-around;
     color: white;

@@ -1,6 +1,6 @@
 <template>
   <div id="form-container">
-    <iframe :src="url" width="640" :height="height" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <iframe :src="url" width="590" :height="height" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </div>
 </template>
 
@@ -15,7 +15,4 @@ export default {
 </script>
 
 <style scoped>
-  #form-container {
-    padding: 100px 0px;
-  }
 </style>

@@ -9,7 +9,7 @@ export default {
   name: 'Links',
   props: {
     label: String,
-    url: String,
+    active: Boolean
   }
 }
 </script>

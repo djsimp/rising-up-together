@@ -1,7 +1,7 @@
 <template>
-  <div id="links">
-    <div class="tab" v-for="link in tabs" :key="link" :class="{ 'active': link === curTab }" @click="tabClicked">
-      <Link :label="link" :active="link === curTab"/>
+  <div id="border">
+    <div class="tab" v-for="link in menu" :key="link" :class="{ 'active': link === activeTab }" @click="tabClicked">
+      <Link :label="link" :active="link === activeTab"/>
     </div>
   </div>
 </template>
@@ -9,19 +9,21 @@
 <script>
 import Link from './Link.vue'
 export default {
-  name: 'Tabs',
+  name: 'Border',
   props: {
-    tabs: Array,
-    curTab: String
+    activeTab: String,
+    menu: Array
   },
   components: {
     Link
+  },
+  computed: {
   },
   methods: {
     tabClicked: function(event) {
       var target = event.target.classList.contains("tab") ? event.target : event.target.closest(".tab");
       if(!target.classList.contains("active")) {
-        this.$emit('tab-clicked', target.innerText);
+        this.$emit('sub-tab-clicked', target.innerText);
       }
       // var activeTabEls = document.getElementsByClassName("active");
       // for(var i = 0; i < activeTabEls.length; i++) {
@@ -35,7 +37,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  #links {
+  #border {
+    background-color: black;
+    height: 32px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+  }
+  #border-tabs {
     display: flex;
     flex-wrap: wrap;
   /*  height: 100%; */
@@ -44,20 +53,17 @@ export default {
   }
   .tab {
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
-    height: 50px;
+    height: 100%;
     padding: 0px 10px;
   }
-  .tab:hover, .active {
-    color: #2c3e50;
-  }
   .tab:hover {
-    background-color: rgba(255,255,255,.5);
     cursor: pointer;
   }
-  .active, .active:hover {
-    background-color: rgba(255,255,255,.7);
+  .active {
+    background-color: white;
+    color: black;
   }
 </style>
