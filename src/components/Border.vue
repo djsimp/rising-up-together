@@ -1,6 +1,6 @@
 <template>
   <div id="border">
-    <div class="tab" v-for="link in menu" :key="link" :class="{ 'active': link === activeTab }" @click="tabClicked">
+    <div class="tab" v-for="(link, index) in menu" :key="index" :class="{ 'active': link === activeTab }" @click="tabClicked">
       <Link :label="link" :active="link === activeTab"/>
     </div>
   </div>
